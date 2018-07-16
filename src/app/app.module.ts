@@ -1,20 +1,24 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import {
+  EventsListComponent,
+  EventsThumbnailComponent,
+  EventService,
+  EventsDetailsComponent,
+  CreateEventsComponent,
+  EventRouteActicator,
+  EventListResolver
+
+} from './events/index';
 
 import { AppComponent } from './app.component';
-import { EventsListComponent } from './events/events-list.component';
-import { EventsThumbnailComponent } from './events/events-thumbnail/events-thumnnail.component';
 import { NavigationComponent } from './navigation/navigation.component';
-import { EventService } from './events/shared/event.service';
 import { ToastrService } from './common/toastr.service';
-import { EventsDetailsComponent } from './events/events-details/events-details.component';
 import { appRoutes } from './routes';
 import { RouterModule } from '@angular/router';
-import { CreateEventsComponent } from './events/create-events/create-events.component';
 import { Error404Component } from './errors/404.component';
-import { EventRouteActicator } from './events/events-details/events-route-activator.service';
-import { EventListResolver } from './events/shared/events-list-resolver.service';
+import { UserProfileComponent } from './users/user-profile/user-profile.component';
 
 
 @NgModule({
@@ -25,7 +29,7 @@ import { EventListResolver } from './events/shared/events-list-resolver.service'
     NavigationComponent,
     EventsDetailsComponent,
     CreateEventsComponent,
-    Error404Component
+    Error404Component,
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
