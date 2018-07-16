@@ -19,6 +19,7 @@ import { appRoutes } from './routes';
 import { RouterModule } from '@angular/router';
 import { Error404Component } from './errors/404.component';
 import { UserProfileComponent } from './users/user-profile/user-profile.component';
+import { AuthService } from './users/auth.service';
 
 
 @NgModule({
@@ -40,6 +41,7 @@ import { UserProfileComponent } from './users/user-profile/user-profile.componen
     ToastrService,
     EventRouteActicator,
     EventListResolver,
+    AuthService,
     { provide: 'canDeactivateCreateEvent', useValue: canDirtyState},
 
   ],
