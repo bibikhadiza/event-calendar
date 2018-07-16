@@ -30,7 +30,19 @@ import { EventRouteActicator } from './events/events-details/events-route-activa
     RouterModule.forRoot(appRoutes),
     BrowserModule
   ],
-  providers: [EventService, ToastrService, EventRouteActicator],
+  providers: [
+    EventService,
+    ToastrService,
+    EventRouteActicator,
+    { provide: 'canDeactivateCreateEvent', useValue: canDirtyState}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+export function canDirtyState(component: CreateEventsComponent) {
+  if ( component.isDirty ) {
+    return window.confirm('You have not saved your work. Are you sure you want to continue?');
+  }
+  return true;
+}
