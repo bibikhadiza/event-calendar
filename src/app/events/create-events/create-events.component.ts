@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { EventService } from '..';
+
 
 
 @Component({
@@ -9,12 +11,20 @@ import { Router } from '@angular/router';
 })
 export class CreateEventsComponent implements OnInit {
   isDirty = true;
-  constructor(private _router: Router) { }
+  newEvent;
+  constructor(private _router: Router, private eventService: EventService) { }
 
   ngOnInit() {
   }
 
   cancel() {
+    this._router.navigate(['/events']);
+  }
+
+  saveEvent(formValues) {
+    console.log(formValues);
+    this.eventService.saveEvent(formValues);
+    this.isDirty = false;
     this._router.navigate(['/events']);
   }
 

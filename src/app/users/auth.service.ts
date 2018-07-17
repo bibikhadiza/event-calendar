@@ -19,4 +19,9 @@ export class AuthService {
     return !!this.currentUser;
   }
 
+  updateUser(formValues) {
+    this.currentUser.firstName = formValues.firstName;
+    this.currentUser.lastName = formValues.lastName;
+  }
+
 }

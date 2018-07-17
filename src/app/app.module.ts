@@ -20,6 +20,7 @@ import { RouterModule } from '@angular/router';
 import { Error404Component } from './errors/404.component';
 import { UserProfileComponent } from './users/user-profile/user-profile.component';
 import { AuthService } from './users/auth.service';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -34,7 +35,9 @@ import { AuthService } from './users/auth.service';
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     EventService,

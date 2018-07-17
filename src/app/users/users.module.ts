@@ -4,7 +4,7 @@ import { RouterModule } from '@angular/router';
 import { usersRoutes } from './user-routes';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { LoginComponent } from './login/login.component';
-import { FormsModule} from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -12,7 +12,8 @@ import { FormsModule} from '@angular/forms';
   imports: [
     CommonModule,
     RouterModule.forChild(usersRoutes),
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   declarations: [
     UserProfileComponent,
