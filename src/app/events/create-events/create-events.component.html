@@ -1,7 +1,7 @@
 <h1>New Event</h1>
 <hr>
 <div class="col-md-6">
-  <form #newEventForm="ngForm" (ngSubmit)="saveEvent(newEventForm.value)" autocomplete="off" novalidate>
+  <form #newEventForm="ngForm" (ngSubmit)="saveEvent(newEventForm)" autocomplete="off" novalidate>
     <div class="form-group" [ngClass]="{'error': newEventForm.controls.name?.invalid && newEventForm.controls.name?.touched}">
       <label for="eventName">Event Name:</label>
       <em *ngIf="newEventForm.controls.name?.invalid && (newEventForm.controls.name?.touched)">Required</em>

@@ -8,8 +8,8 @@ import {
   EventsDetailsComponent,
   CreateEventsComponent,
   EventRouteActicator,
-  EventListResolver
-
+  EventListResolver,
+  CreateSessionComponent
 } from './events/index';
 
 import { AppComponent } from './app.component';
@@ -32,6 +32,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     EventsDetailsComponent,
     CreateEventsComponent,
     Error404Component,
+    CreateSessionComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),

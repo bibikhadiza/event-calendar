@@ -14,8 +14,7 @@ export class CreateEventsComponent implements OnInit {
   newEvent;
   constructor(private _router: Router, private eventService: EventService) { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   cancel() {
     this._router.navigate(['/events']);
