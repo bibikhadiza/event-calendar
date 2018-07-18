@@ -1,0 +1,4 @@
+<div (click)="toogleContent()" class="well pointable">
+  <div class="well-title">{{title}}</div>
+  <ng-content *ngIf="visible"></ng-content>
+</div>
